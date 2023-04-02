@@ -8,7 +8,7 @@ class sales_model extends CI_Model {
         parent::__construct();
 		$this->table = 'sales_transaction';
 		
-		$this->select_default = 'sales_transaction.id AS id, customer_name, customer_phone, total_price, total_item,sales_transaction.date AS date,sales_transaction.pay_deadline_date,sales_transaction.is_cash   ';
+		$this->select_default = 'sales_transaction.id AS id, customer_name, customer_phone, total_price, total_item,sales_transaction.date AS date,sales_transaction.pay_deadline_date,sales_transaction.is_cash';
 	}
 	
 	public function get_all($limit_offset = array()){

@@ -29,8 +29,10 @@
                             <table id="example1" class="table table-bordered table-striped">
                                 <thead>
                                 <tr>
+                                    <th>user</th>
                                     <th>Transaction ID</th>
                                     <th>Supplier Name</th>
+                                    
                                     <th>Total Item</th>
                                     <th>Total</th>
                                     <th>Date</th>
@@ -38,6 +40,7 @@
                                 </thead>
                                 <tbody>
                                     <tr>
+                                         <td><?php echo $details[0]->user;?></td>
                                         <td><?php echo $details[0]->id;?></td>
                                         <td><?php echo $details[0]->supplier_name;?></td>
                                         <td><?php echo $details[0]->total_item;?></td>

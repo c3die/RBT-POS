@@ -192,10 +192,11 @@ class transaction extends MY_Controller {
 		$carts =  $this->cart->contents();
 		if($this->form_validation->run() != FALSE && !empty($carts) && is_array($carts)){
 			$data['id'] = escape($this->input->post('transaction_id'));
+			$data['user'] = $this->username;
 			$data['supplier_id'] = escape($this->input->post('supplier_id'));
 			$data['total_price'] = $this->cart->total();
 			$data['total_item'] = $this->cart->total_items();
-
+			
 			$this->transaction_model->insert($data);
 			if($data['id']){
 				$this->_insert_purchase_data($data['id'],$carts);

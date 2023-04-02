@@ -51,7 +51,8 @@
         <table style="display:inline;">
             <thead>
                 <tr>
-                    <td style="width:350px;">Dear:</td>
+                    <td style="width:350px;">Customer</td>
+                     <td style="width:350px;">User: <?php echo $details[0]->user;?></td>
                     <td style="width:200px;">Transaction Code</td>
                     <td style="width:200px;">: <?php echo $details[0]->id;?></td>
                 </tr>

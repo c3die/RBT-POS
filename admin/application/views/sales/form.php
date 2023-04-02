@@ -46,8 +46,11 @@
                   <div class="form-group">
                     <label class="col-sm-4 control-label" for="customer_id">Customer</label>
                      <input type="hidden" value="add new Sales Transaction" name="activity"  id="activity" class="form-control"/>
-                      <input type="hidden" value="<?php echo $this->username;  ?>" name="username"  id="username" class="form-control"/>
+                    
+                 
+                     <input type="hidden" value="<?php echo $this->username;  ?>" name="username"  id="username" class="form-control"/>
                     <div class="col-sm-8">
+                    <input type="hidden" class="form-control" value="<?php echo $this->username;  ?>" name="user"  id="user" required/>
                       <select class="form-control" id="customer_id" name="customer_id">
                         <?php if(isset($customers) && is_array($customers)){?>
                           <?php foreach($customers as $item){?>
@@ -97,7 +100,7 @@
                           <td>Qty</td>
                          
                           <td>Selling Price</td>
-                          <td>Discount</td>
+                          <td>Discount (%)</td>
                           <td>Price</td>
                           <td>Input Item</td>
                         </tr>

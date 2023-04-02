@@ -185,6 +185,7 @@ class sales extends MY_Controller {
 	public function add_process(){
 		$this->form_validation->set_rules('sales_id', 'sales_id', 'required');
 		$this->form_validation->set_rules('customer_id', 'customer_id', 'required');
+		
 		$this->form_validation->set_rules('is_cash', 'is_cash', 'required');
 
 		$carts =  $this->cart->contents();
@@ -200,7 +201,7 @@ class sales extends MY_Controller {
 			$data['is_cash'] = escape($this->input->post('is_cash'));
 			$data['total_price'] = $this->cart->total();
 			$data['total_item'] = $this->cart->total_items();
-
+			$data['user'] = $this->username;
 		
 		
 
@@ -261,7 +262,7 @@ class sales extends MY_Controller {
         $data['total_item'] = escape($this->input->post('total_item'));
         $data['date'] = escape($this->input->post('date'));
         $data['status'] = escape($this->input->post('status'));
-
+		
         
             
           
